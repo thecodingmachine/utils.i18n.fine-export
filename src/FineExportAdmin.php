@@ -5,6 +5,14 @@
  * See the file LICENSE.txt for copying permission.
  */
 
+use Mouf\MoufManager;
+use Mouf\MoufUtils;
+
+MoufUtils::registerMainMenu('htmlMainMenu', 'HTML', null, 'mainMenu', 40);
+MoufUtils::registerMenuItem('htmlFineMainMenu', 'Fine', null, 'htmlMainMenu', 10);
+MoufUtils::registerChooseInstanceMenuItem('htmlFineExportTranslationMenuItem', 'Export Excel', 'fineExport/excelExport', "Mouf\\Utils\\I18n\\Fine\\Translate\\FinePHPArrayTranslationService", 'htmlFineMainMenu', 40);
+MoufUtils::registerChooseInstanceMenuItem('htmlFineImportTranslationMenuItem', 'Import Excel', 'fineExport/excelImport', "Mouf\\Utils\\I18n\\Fine\\Translate\\FinePHPArrayTranslationService", 'htmlFineMainMenu', 50);
+
 /*
 use Mouf\MoufManager;
 use Mouf\MoufUtils;
@@ -23,5 +31,11 @@ MoufUtils::registerChooseInstanceMenuItem('htmlFineImportCSV2MenuItem', 'Import/
 /*
 MoufManager::getMoufManager()->declareComponent('editLabels', 'Mouf\\Utils\\I18n\\Fine\\Controllres\\,EditLabelController', true);
 MoufManager::getMoufManager()->bindComponents('editLabels', 'template', 'moufTemplate');
+*/
 
+
+$moufManager = MoufManager::getMoufManager();
+$moufManager->declareComponent('fineExport', 'Mouf\\Utils\\I18n\\FineExport\\Controllers\\fineExcelController', true);
+$moufManager->bindComponents('fineExport', 'template', 'moufTemplate');
+$moufManager->bindComponents('fineExport', 'content', 'block.content');
 ?>
