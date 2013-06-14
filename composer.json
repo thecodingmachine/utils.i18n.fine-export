@@ -28,14 +28,7 @@
 	    "mouf": {
 			"require-admin": [
     			"src/FineExportAdmin.php"
-    		],
-	    	"doc": [
-	    		{
-	    			"title": "Export/Import",
-	    			"url": "doc/export-import.html"
-	    		}
-	    	]
-	    	
+    		]	    	
 	    }
 	}
 }
