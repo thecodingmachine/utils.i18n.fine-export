@@ -35,7 +35,7 @@ MoufManager::getMoufManager()->bindComponents('editLabels', 'template', 'moufTem
 
 
 $moufManager = MoufManager::getMoufManager();
-$moufManager->declareComponent('fineExport', 'Mouf\\Utils\\I18n\\FineExport\\Controllers\\fineExcelController', true);
+$moufManager->declareComponent('fineExport', 'Mouf\\Utils\\I18n\\FineExport\\Controllers\\FineExcelController', true);
 $moufManager->bindComponents('fineExport', 'template', 'moufTemplate');
 $moufManager->bindComponents('fineExport', 'content', 'block.content');
 ?>
