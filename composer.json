@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Mouf": "src/"
+            "Mouf\\Utils\\I18n\\FineExport": "src/"
         }
     },
     "extra": {
